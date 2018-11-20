@@ -95,6 +95,7 @@ html {
     margin: 0 auto;
     .sr-container {
       margin-bottom: 20px;
+      visibility: hidden;
     }
     .sr-url {
       color: #006621;
