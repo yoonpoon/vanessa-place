@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const pkg = require('./package')
 
 module.exports = {
@@ -29,15 +31,20 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+ plugins: [
+  { src: '~/plugins/contentful' },
+  { src: '~/plugins/VueMasonry' },
+  { src: '~/plugins/VueSlideout', ssr: false }
+],
 
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
-  ],
+ modules: [
+  // Doc: https://github.com/nuxt-community/axios-module#usage
+  '@nuxtjs/axios',
+  '@nuxtjs/dotenv'
+],
   /*
   ** Axios module configuration
   */
