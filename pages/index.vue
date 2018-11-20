@@ -74,7 +74,7 @@ html {
     font-size: 18px;
     margin-bottom: 5px;
     margin-top: 20px;
-    font-weight: lighter;
+    font-weight: normal;
   }
   h2 {
     font-size: 14px;
@@ -83,6 +83,9 @@ html {
   }
   a {
     color: #1a0dab;
+  }
+  p {
+    font-size: 14px;
   }
   .wrap {
     width: 95%;
