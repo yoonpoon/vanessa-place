@@ -27,14 +27,16 @@
         v-for="post in posts" 
         :key="post.id"
         class="col s12 col m6 col l4 sr-container">
-        <a 
-          :href="post.fields.link"
-          target="_blank"
-          class="sr-link"> 
-          <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
-        </a>
-        <h2 class="sr-url">{{ post.fields.link }}</h2>
-        <p> {{ post.fields.intro }} </p>
+        <section v-scroll-reveal>
+          <a 
+            :href="post.fields.link"
+            target="_blank"
+            class="sr-link"> 
+            <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
+          </a>
+          <h2 class="sr-url">{{ post.fields.link }}</h2>
+          <p> {{ post.fields.intro }} </p>
+        </section>
       </div>
     </masonry>
   </section>
@@ -43,6 +45,7 @@
 <script>
 import client from '~/plugins/contentful'
 import VueMasonry from '~/plugins/VueMasonry'
+import ScrollReveal from '~/plugins/ScrollReveal'
 
 export default {
   data() {

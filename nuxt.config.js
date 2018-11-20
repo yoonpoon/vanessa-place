@@ -31,20 +31,21 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
- plugins: [
-  { src: '~/plugins/contentful' },
-  { src: '~/plugins/VueMasonry' },
-  { src: '~/plugins/VueSlideout', ssr: false }
-],
+  plugins: [
+    { src: '~/plugins/contentful' },
+    { src: '~/plugins/VueMasonry' },
+    { src: '~/plugins/VueSlideout', ssr: false },
+    { src: '~/plugins/ScrollReveal', ssr: false }
+  ],
 
   /*
   ** Nuxt.js modules
   */
- modules: [
-  // Doc: https://github.com/nuxt-community/axios-module#usage
-  '@nuxtjs/axios',
-  '@nuxtjs/dotenv'
-],
+  modules: [
+    // Doc: https://github.com/nuxt-community/axios-module#usage
+    '@nuxtjs/axios',
+    '@nuxtjs/dotenv'
+  ],
   /*
   ** Axios module configuration
   */
