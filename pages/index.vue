@@ -1,5 +1,38 @@
 <template>
   <section class="wrap">
+    <div 
+      id="nav" 
+      class="clearfix">
+      <div class="col col-2">
+        <p> Vanessa Place </p>
+        <p> Criminal Appellate Lawyer</p>
+        <p> Artist</p>
+        <p> New York, NY</p>
+      </div>
+      <div class="col col-2">
+        <img 
+          class="bio-photo" 
+          src="~/assets/Vanessa_Site_Photo.png">
+      </div>
+      <div class="col col-2">
+        <p> Vanessa Place </p>
+        <p> Criminal Appellate Lawyer</p>
+        <p> Artist</p>
+        <p> New York, NY</p>
+      </div>
+      <div class="col col-2">
+        <p> Vanessa Place </p>
+        <p> Criminal Appellate Lawyer</p>
+        <p> Artist</p>
+        <p> New York, NY</p>
+      </div>
+      <div class="col col-2">
+        <p> Vanessa Place </p>
+        <p> Criminal Appellate Lawyer</p>
+        <p> Artist</p>
+        <p> New York, NY</p>
+      </div>            
+    </div>
     <!-- <no-ssr>
       <Slideout 
         :toggle-selectors="['.toggle-button']" 
@@ -73,6 +106,9 @@ export default {
 
 <style lang="scss" scoped>
 html {
+  body {
+    line-height: 1.15;
+  }
   h1 {
     font-size: 18px;
     margin-bottom: 5px;
@@ -81,20 +117,25 @@ html {
   }
   h2 {
     font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+    margin-top: 0 !important;
+    font-weight: 400 !important;
     font-weight: lighter;
   }
   a {
     color: #1a0dab;
+    text-decoration: underline;
   }
   p {
     font-size: 14px;
+    margin-bottom: 0;
+    line-height: 1.15;
   }
   .wrap {
     width: 95%;
     margin: 0 auto;
     .sr-container {
-      margin-bottom: 20px;
+      margin-bottom: 0px;
       visibility: hidden;
     }
     .sr-url {
@@ -102,7 +143,52 @@ html {
     }
   }
 }
+.clearfix {
+  text-align: left !important;
+  .col-2 {
+    margin-left: 3.33%;
+  }
+}
+.bio-photo {
+  visibility: hidden;
+}
+#nav {
+  width: 13%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  position: fixed;
+  top: 15%;
+  background-color: black;
+  height: 200px;
+  border: 2px solid black;
+  text-align: center;
+  transition: all 0.2s linear;
+  box-shadow: 5px 5px 5px #545454;
+}
+#nav:hover img {
+  visibility: visible;
+}
 
+#nav p {
+  width: 30px;
+  transition: all 0.2s linear;
+  background-color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
+  color: white;
+}
+#nav:hover p {
+  width: 95%;
+  visibility: visible;
+}
+#nav:hover {
+  width: 95%;
+  display: flex !important;
+  align-content: center !important;
+  align-items: center;
+}
 .slideout-menu {
   position: absolute;
   top: 25%;
