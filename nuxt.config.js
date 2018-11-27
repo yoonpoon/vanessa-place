@@ -41,6 +41,7 @@ module.exports = {
     { src: '~/plugins/contentful' },
     { src: '~/plugins/VueMasonry' },
     { src: '~/plugins/VueSlideout', ssr: false },
+    { src: '~/plugins/marquee', ssr: false },
     { src: '~/plugins/ScrollReveal', ssr: false }
   ],
 

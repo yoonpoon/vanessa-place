@@ -72,6 +72,9 @@
         </section>
       </div>
     </masonry>
+    <marquee-text :duration="30">
+      <div class="marquee">Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • </div>
+    </marquee-text>    
   </section>
 </template>
 
@@ -79,6 +82,7 @@
 import client from '~/plugins/contentful'
 import VueMasonry from '~/plugins/VueMasonry'
 import ScrollReveal from '~/plugins/ScrollReveal'
+import marquee from '~/plugins/marquee'
 
 export default {
   data() {
@@ -148,6 +152,11 @@ html {
   .col-2 {
     margin-left: 3.33%;
   }
+}
+.marquee {
+  color: red;
+  font-size: 42px;
+  margin: 5.5rem 0 5.5rem 0;
 }
 .bio-photo {
   visibility: hidden;
