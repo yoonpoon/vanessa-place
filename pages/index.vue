@@ -33,33 +33,14 @@
         <p> New York, NY</p>
       </div>            
     </div>
-    <!-- <no-ssr>
-      <Slideout 
-        :toggle-selectors="['.toggle-button']" 
-        menu="#menu" 
-        panel="#panel" 
-        @on-open="open">
-        <nav id="menu">
-          <div>Menu</div>
-        </nav>
-        <main id="panel">
-          <header>
-            <div>
-              <button class="toggle-button">☰</button>
-              Panel
-            </div>
-          </header>
-        </main>
-      </Slideout>
-    </no-ssr> -->
     <masonry
       :cols="{default: 3, 1000: 2, 800: 1}"
-      :gutter="{default: '30px', 700: '15px'}"
+      :gutter="{default: '15'}"
     >
       <div 
         v-for="post in posts" 
         :key="post.id"
-        class="col s12 col m6 col l4 sr-container">
+        class="sr-container">
         <section v-scroll-reveal>
           <a 
             :href="post.fields.link"
@@ -197,44 +178,5 @@ html {
   display: flex !important;
   align-content: center !important;
   align-items: center;
-}
-.slideout-menu {
-  position: absolute;
-  top: 25%;
-  bottom: 0;
-  width: 90vw;
-  height: 193px;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  z-index: 0;
-  display: none;
-  background-color: black;
-  color: white;
-}
-
-.slideout-menu-left {
-  left: 0;
-}
-
-.slideout-menu-right {
-  right: 0;
-}
-
-.slideout-panel {
-  background-color: transparent;
-  color: black;
-  position: relative;
-  z-index: 1;
-  will-change: transform;
-}
-
-.slideout-open,
-.slideout-open body,
-.slideout-open .slideout-panel {
-  overflow: hidden;
-}
-
-.slideout-open .slideout-menu {
-  display: block;
 }
 </style>
