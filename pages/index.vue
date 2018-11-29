@@ -33,7 +33,29 @@
         <p> New York, NY</p>
       </div>            
     </div>
-    <masonry
+    <div 
+      v-masonry 
+      item-selector=".sr-container" 
+      class="masonry-container">
+      <div 
+        v-masonry-tile 
+        v-for="(post, index) in posts" 
+        :key="index"
+        transition-duration="0.15s"
+        class="sr-container sm-col sm-col-12 md-col-6 lg-col-4">
+        <section v-scroll-reveal>
+          <a 
+            :href="'www.google.com'"
+            target="_blank"
+            class="sr-link"> 
+            <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
+          </a>
+          <h2 class="sr-url">{{ post.fields.link }}</h2>
+          <p> {{ post.fields.intro }} </p>
+        </section>
+      </div>
+    </div>
+    <!-- <masonry
       :cols="{default: 3, 1000: 2, 800: 1}"
       :gutter="{default: '15'}"
     >
@@ -52,7 +74,7 @@
           <p> {{ post.fields.intro }} </p>
         </section>
       </div>
-    </masonry>
+    </masonry> -->
     <marquee-text :duration="30">
       <div class="marquee">Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • </div>
     </marquee-text>    
@@ -64,6 +86,7 @@ import client from '~/plugins/contentful'
 import VueMasonry from '~/plugins/VueMasonry'
 import ScrollReveal from '~/plugins/ScrollReveal'
 import marquee from '~/plugins/marquee'
+import Masonry from '~/plugins/Masonry'
 
 export default {
   data() {
@@ -120,7 +143,9 @@ html {
     width: 95%;
     margin: 0 auto;
     .sr-container {
+      padding-right: 15px;
       margin-bottom: 0px;
+      // padding-right: 15px;
       visibility: hidden;
     }
     .sr-url {
@@ -137,7 +162,7 @@ html {
 .marquee {
   color: red;
   font-size: 42px;
-  margin: 5.5rem 0 5.5rem 0;
+  margin: 3rem 0 3rem 0;
 }
 .bio-photo {
   visibility: hidden;
@@ -145,6 +170,7 @@ html {
 #nav {
   width: 13%;
   display: flex;
+  z-index: 1000;
   align-content: center;
   align-items: center;
   position: fixed;
@@ -159,7 +185,6 @@ html {
 #nav:hover img {
   visibility: visible;
 }
-
 #nav p {
   width: 30px;
   transition: all 0.2s linear;
