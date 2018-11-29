@@ -46,7 +46,7 @@
           class="sr-container sm-col sm-col-12 md-col-6 lg-col-4">
           <section v-scroll-reveal>
             <a 
-              :href="'www.google.com'"
+              href="https://www.google.com/search?source=hp&ei=syYAXJyeN7TS9AP83aK4Aw&q=vanessa+place&btnK=Google+Search&oq=vanessa+place&gs_l=psy-ab.3..0l10.2461.3979..4108...0.0..0.90.1109.14......0....1..gws-wiz.....0..0i131.X9_fK_W6eT8"
               target="_blank"
               class="sr-link"> 
               <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
@@ -57,26 +57,6 @@
         </div>
       </div>
     </no-ssr>
-    <!-- <masonry
-      :cols="{default: 3, 1000: 2, 800: 1}"
-      :gutter="{default: '15'}"
-    >
-      <div 
-        v-for="post in posts" 
-        :key="post.id"
-        class="sr-container">
-        <section v-scroll-reveal>
-          <a 
-            :href="post.fields.link"
-            target="_blank"
-            class="sr-link"> 
-            <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
-          </a>
-          <h2 class="sr-url">{{ post.fields.link }}</h2>
-          <p> {{ post.fields.intro }} </p>
-        </section>
-      </div>
-    </masonry> -->
     <marquee-text :duration="30">
       <div class="marquee">Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • Venmo: @Vanessa-Place • </div>
     </marquee-text>    
@@ -85,7 +65,6 @@
 
 <script>
 import client from '~/plugins/contentful'
-import VueMasonry from '~/plugins/VueMasonry'
 import ScrollReveal from '~/plugins/ScrollReveal'
 import marquee from '~/plugins/marquee'
 import Masonry from '~/plugins/Masonry'
@@ -105,11 +84,6 @@ export default {
       })
       .then(({ items: [{ fields }] }) => fields)
       .catch(console.error)
-  },
-  methods: {
-    open: function() {
-      console.log('slideoutOpen')
-    }
   }
 }
 </script>
