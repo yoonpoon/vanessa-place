@@ -33,28 +33,30 @@
         <p> New York, NY</p>
       </div>            
     </div>
-    <div 
-      v-masonry 
-      item-selector=".sr-container" 
-      class="masonry-container">
+    <no-ssr>
       <div 
-        v-masonry-tile 
-        v-for="(post, index) in posts" 
-        :key="index"
-        transition-duration="0.15s"
-        class="sr-container sm-col sm-col-12 md-col-6 lg-col-4">
-        <section v-scroll-reveal>
-          <a 
-            :href="'www.google.com'"
-            target="_blank"
-            class="sr-link"> 
-            <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
-          </a>
-          <h2 class="sr-url">{{ post.fields.link }}</h2>
-          <p> {{ post.fields.intro }} </p>
-        </section>
+        v-masonry 
+        item-selector=".sr-container" 
+        class="masonry-container">
+        <div 
+          v-masonry-tile 
+          v-for="(post, index) in posts" 
+          :key="index"
+          transition-duration="0.15s"
+          class="sr-container sm-col sm-col-12 md-col-6 lg-col-4">
+          <section v-scroll-reveal>
+            <a 
+              :href="'www.google.com'"
+              target="_blank"
+              class="sr-link"> 
+              <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
+            </a>
+            <h2 class="sr-url">{{ post.fields.link }}</h2>
+            <p> {{ post.fields.intro }} </p>
+          </section>
+        </div>
       </div>
-    </div>
+    </no-ssr>
     <!-- <masonry
       :cols="{default: 3, 1000: 2, 800: 1}"
       :gutter="{default: '15'}"
