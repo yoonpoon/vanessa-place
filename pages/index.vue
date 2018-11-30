@@ -164,7 +164,7 @@ html {
   display: flex;
   z-index: 1000;
   position: fixed;
-  top: 15%;
+  top: 12.5%;
   background-color: black;
   height: 230px;
   border: 2px solid black;
