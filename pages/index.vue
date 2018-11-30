@@ -41,16 +41,14 @@
           :key="index"
           transition-duration="0.15s"
           class="sr-container sm-col sm-col-12 md-col-6 lg-col-4">
-          <section v-scroll-reveal>
-            <a 
-              href="https://www.google.com/search?source=hp&ei=syYAXJyeN7TS9AP83aK4Aw&q=vanessa+place&btnK=Google+Search&oq=vanessa+place&gs_l=psy-ab.3..0l10.2461.3979..4108...0.0..0.90.1109.14......0....1..gws-wiz.....0..0i131.X9_fK_W6eT8"
-              target="_blank"
-              class="sr-link"> 
-              <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
-            </a>
-            <h2 class="sr-url">{{ post.fields.link }}</h2>
-            <p> {{ post.fields.intro }} </p>
-          </section>
+          <a 
+            href="https://www.google.com/search?source=hp&ei=syYAXJyeN7TS9AP83aK4Aw&q=vanessa+place&btnK=Google+Search&oq=vanessa+place&gs_l=psy-ab.3..0l10.2461.3979..4108...0.0..0.90.1109.14......0....1..gws-wiz.....0..0i131.X9_fK_W6eT8"
+            target="_blank"
+            class="sr-link"> 
+            <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
+          </a>
+          <h2 class="sr-url">{{ post.fields.link }}</h2>
+          <p> {{ post.fields.intro }} </p>
         </div>
       </div>
     </no-ssr>
