@@ -2,35 +2,32 @@
   <section class="wrap">
     <div 
       id="nav" 
-      class="clearfix">
-      <div class="col col-2">
+      class="flex flex-justify">
+      <div class="nav-copy-block">
         <p> Vanessa Place </p>
         <p> Criminal Appellate Lawyer</p>
         <p> Artist</p>
         <p> New York, NY</p>
       </div>
-      <div class="col col-2">
+      <div class="nav-copy-block flex-top">
         <img 
           class="bio-photo" 
           src="~/assets/Vanessa_Site_Photo.png">
       </div>
-      <div class="col col-2">
-        <p> Vanessa Place </p>
-        <p> Criminal Appellate Lawyer</p>
-        <p> Artist</p>
-        <p> New York, NY</p>
+      <div class="nav-copy-block">
+        <p> Contact </p>
+        <p> Email: Acutlet@gmail.com </p>
+        <p> Twitter: @VanessaPlace2 </p>
+        <p> Instagram: @VanessaPlacex </p>
       </div>
-      <div class="col col-2">
-        <p> Vanessa Place </p>
-        <p> Criminal Appellate Lawyer</p>
-        <p> Artist</p>
-        <p> New York, NY</p>
+      <div class="nav-copy-block">
+        <p> Site Construction  </p>
+        <p> Art Direction + Design: Satomi</p>
+        <p> Development: Albert Lee </p>
+        <p> Photography: Dan Allegretto </p>
       </div>
-      <div class="col col-2">
-        <p> Vanessa Place </p>
-        <p> Criminal Appellate Lawyer</p>
-        <p> Artist</p>
-        <p> New York, NY</p>
+      <div class="nav-copy-block">
+        <p> Made in America, 2018 </p>
       </div>            
     </div>
     <no-ssr>
@@ -44,14 +41,16 @@
           :key="index"
           transition-duration="0.15s"
           class="sr-container sm-col sm-col-12 md-col-6 lg-col-4">
-          <a 
-            href="https://www.google.com/search?source=hp&ei=syYAXJyeN7TS9AP83aK4Aw&q=vanessa+place&btnK=Google+Search&oq=vanessa+place&gs_l=psy-ab.3..0l10.2461.3979..4108...0.0..0.90.1109.14......0....1..gws-wiz.....0..0i131.X9_fK_W6eT8"
-            target="_blank"
-            class="sr-link"> 
-            <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
-          </a>
-          <h2 class="sr-url">{{ post.fields.link }}</h2>
-          <p> {{ post.fields.intro }} </p>
+          <section v-scroll-reveal>
+            <a 
+              href="https://www.google.com/search?source=hp&ei=syYAXJyeN7TS9AP83aK4Aw&q=vanessa+place&btnK=Google+Search&oq=vanessa+place&gs_l=psy-ab.3..0l10.2461.3979..4108...0.0..0.90.1109.14......0....1..gws-wiz.....0..0i131.X9_fK_W6eT8"
+              target="_blank"
+              class="sr-link"> 
+              <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
+            </a>
+            <h2 class="sr-url">{{ post.fields.link }}</h2>
+            <p> {{ post.fields.intro }} </p>
+          </section>
         </div>
       </div>
     </no-ssr>
@@ -89,7 +88,7 @@ export default {
 <style lang="scss" scoped>
 html {
   body {
-    line-height: 1.15;
+    line-height: 1.25;
   }
   h1 {
     font-size: 18px;
@@ -111,7 +110,7 @@ html {
   p {
     font-size: 14px;
     margin-bottom: 0;
-    line-height: 1.15;
+    line-height: 1.25;
   }
   .wrap {
     width: 95%;
@@ -127,6 +126,9 @@ html {
     }
   }
 }
+.flex-top {
+  align-self: flex-end;
+}
 .clearfix {
   text-align: left !important;
   .col-2 {
@@ -138,19 +140,33 @@ html {
   font-size: 42px;
   margin: 3rem 0 3rem 0;
 }
+.nav-copy-block {
+  width: 18%;
+  text-align: left;
+  p {
+    &:first-child {
+      margin-bottom: 0.5rem;
+      color: red !important;
+    }
+  }
+}
 .bio-photo {
   visibility: hidden;
+  margin-top: 10px;
+  border: 1px solid red;
+  height: 210px;
 }
 #nav {
   width: 13%;
+  padding-top: 4.35rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
   display: flex;
   z-index: 1000;
-  align-content: center;
-  align-items: center;
   position: fixed;
   top: 15%;
   background-color: black;
-  height: 200px;
+  height: 230px;
   border: 2px solid black;
   text-align: center;
   transition: all 0.2s linear;
@@ -174,8 +190,5 @@ html {
 }
 #nav:hover {
   width: 95%;
-  display: flex !important;
-  align-content: center !important;
-  align-items: center;
 }
 </style>
