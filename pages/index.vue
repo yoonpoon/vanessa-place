@@ -145,7 +145,6 @@ html {
     }
     .sr-url {
       color: #006621;
-      visibility: hidden;
     }
   }
 }
@@ -248,5 +247,8 @@ html {
     width: auto;
     transition: height 0.2s linear;
   }
+}
+.masonry-container {
+  z-index: 0;
 }
 </style>
