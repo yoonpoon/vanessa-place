@@ -145,6 +145,7 @@ html {
     }
     .sr-url {
       color: #006621;
+      visibility: hidden;
     }
   }
 }
@@ -180,6 +181,7 @@ html {
   margin-top: 10px;
   border: 1px solid red;
   height: 210px;
+  visibility: hidden;
 }
 #nav {
   width: 13%;
@@ -199,7 +201,7 @@ html {
   @media only screen and (max-width: 767px) {
     height: 62%;
     width: auto;
-    display: inherit;
+    display: inline-table;
     transition: height 0.2s linear;
     padding-top: 1rem;
     padding-right: 1rem;
@@ -228,6 +230,7 @@ html {
   color: white;
   @media only screen and (max-width: 767px) {
     width: auto;
+    visibility: visible;
     transition: height 0.2s linear;
   }
 }
