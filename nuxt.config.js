@@ -41,7 +41,8 @@ module.exports = {
     { src: '~/plugins/contentful' },
     { src: '~/plugins/marquee', ssr: false },
     { src: '~/plugins/Masonry', ssr: false },
-    { src: '~/plugins/ScrollReveal', ssr: false }
+    { src: '~/plugins/ScrollReveal', ssr: false },
+    { src: '~/plugins/infiniteScroll', ssr: false }
   ],
 
   /*

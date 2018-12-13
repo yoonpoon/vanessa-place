@@ -34,21 +34,24 @@
       <div 
         v-masonry 
         item-selector=".sr-container" 
-        class="masonry-container">
+        class="masonry-container">      
         <div 
-          v-masonry-tile 
-          v-for="(post, index) in posts" 
-          :key="index"
-          transition-duration="0.15s"
-          class="sr-container sm-col sm-col-12 md-col-6 lg-col-4">
-          <a 
-            href="https://www.google.com/search?source=hp&ei=syYAXJyeN7TS9AP83aK4Aw&q=vanessa+place&btnK=Google+Search&oq=vanessa+place&gs_l=psy-ab.3..0l10.2461.3979..4108...0.0..0.90.1109.14......0....1..gws-wiz.....0..0i131.X9_fK_W6eT8"
-            target="_blank"
-            class="sr-link"> 
-            <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
-          </a>
-          <h2 class="sr-url">{{ post.fields.link }}</h2>
-          <p> {{ post.fields.intro }} </p>
+          v-infinite-scroll="loadMore" 
+          infinite-scroll-disabled="busy" 
+          infinite-scroll-distance="50">
+          <div 
+            v-for="(post, index) in posts" 
+            :key="index"          
+            class="sr-container sm-col sm-col-12 md-col-6 lg-col-4">
+            <a 
+              href="https://www.google.com/search?source=hp&ei=syYAXJyeN7TS9AP83aK4Aw&q=vanessa+place&btnK=Google+Search&oq=vanessa+place&gs_l=psy-ab.3..0l10.2461.3979..4108...0.0..0.90.1109.14......0....1..gws-wiz.....0..0i131.X9_fK_W6eT8"
+              target="_blank"
+              class="sr-link"> 
+              <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
+            </a>
+            <h2 class="sr-url">{{ post.fields.link }}</h2>
+            <p> {{ post.fields.intro }} </p>
+          </div>        
         </div>
       </div>
     </no-ssr>
@@ -63,11 +66,15 @@ import client from '~/plugins/contentful'
 import ScrollReveal from '~/plugins/ScrollReveal'
 import marquee from '~/plugins/marquee'
 import Masonry from '~/plugins/Masonry'
+import infiniteScroll from '~/plugins/infiniteScroll'
+
+var count = 0
 
 export default {
   data() {
     return {
-      posts: []
+      posts: [],
+      busy: false
     }
   },
   asyncData() {
@@ -79,6 +86,18 @@ export default {
       })
       .then(({ items: [{ fields }] }) => fields)
       .catch(console.error)
+  },
+  methods: {
+    loadMore: function() {
+      this.busy = true
+
+      setTimeout(() => {
+        for (var i = 0, j = 10; i < j; i++) {
+          this.posts.push({ name: count++ })
+        }
+        this.busy = false
+      }, 1000)
+    }
   }
 }
 </script>
