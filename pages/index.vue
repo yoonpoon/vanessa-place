@@ -230,7 +230,6 @@ html {
   color: white;
   @media only screen and (max-width: 767px) {
     width: auto;
-    visibility: visible;
     transition: height 0.2s linear;
   }
 }
@@ -239,6 +238,7 @@ html {
   visibility: visible;
   @media only screen and (max-width: 767px) {
     width: auto;
+    visibility: visible;
     transition: height 0.2s linear;
   }
 }
@@ -246,6 +246,7 @@ html {
   width: 95%;
   @media only screen and (max-width: 767px) {
     width: auto;
+    visibility: visible;
     transition: height 0.2s linear;
   }
 }
