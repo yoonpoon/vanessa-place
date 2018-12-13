@@ -138,6 +138,7 @@ html {
     margin: 0 auto;
     .sr-container {
       padding-right: 15px;
+      z-index: 0;
       margin-bottom: 0px;
       // padding-right: 15px;
       // visibility: hidden;
