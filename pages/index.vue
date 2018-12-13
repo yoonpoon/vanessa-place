@@ -3,31 +3,31 @@
     <div 
       id="nav" 
       class="flex flex-justify">
-      <div class="nav-copy-block">
-        <p> Vanessa Place </p>
-        <p> Criminal Appellate Lawyer</p>
-        <p> Artist</p>
-        <p> New York, NY</p>
+      <div class="nav-copy-block sm-col sm-col-12">
+        <p class="ag-reg"> Vanessa Place </p>
+        <p class="ag-thin"> Criminal Appellate Lawyer</p>
+        <p class="ag-thin"> Artist</p>
+        <p class="ag-thin"> New York, NY</p>
       </div>
-      <div class="nav-copy-block flex-top">
+      <div class="nav-copy-block sm-col sm-col-12 flex-top">
         <img 
           class="bio-photo" 
           src="~/assets/Vanessa_Site_Photo.png">
       </div>
-      <div class="nav-copy-block">
-        <p> Contact </p>
-        <p> Email: Acutlet@gmail.com </p>
-        <p> Twitter: @VanessaPlace2 </p>
-        <p> Instagram: @VanessaPlacex </p>
+      <div class="nav-copy-block sm-col sm-col-12">
+        <p class="ag-reg"> Contact </p>
+        <p class="ag-thin"> Email: Acutlet@gmail.com </p>
+        <p class="ag-thin"> Twitter: @VanessaPlace2 </p>
+        <p class="ag-thin"> Instagram: @VanessaPlacex </p>
       </div>
-      <div class="nav-copy-block">
-        <p> Site Construction  </p>
-        <p> Art Direction + Design: Satomi</p>
-        <p> Development: Albert Lee </p>
-        <p> Photography: Dan Allegretto </p>
+      <div class="nav-copy-block sm-col sm-col-12">
+        <p class="ag-reg"> Site Construction  </p>
+        <p class="ag-thin"> Art Direction + Design: Satomi</p>
+        <p class="ag-thin"> Development: Albert Lee </p>
+        <p class="ag-thin"> Photography: Dan Allegretto </p>
       </div>
-      <div class="nav-copy-block">
-        <p> Made in America, 2018 </p>
+      <div class="nav-copy-block sm-col sm-col-12">
+        <p class="ag-reg"> Made in America, 2018 </p>
       </div>            
     </div>
     <no-ssr>
@@ -104,6 +104,10 @@ export default {
 
 <style lang="scss" scoped>
 html {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   body {
     line-height: 1.25;
   }
@@ -160,6 +164,9 @@ html {
 .nav-copy-block {
   width: 18%;
   text-align: left;
+  @media only screen and (max-width: 767px) {
+    width: auto;
+  }
   p {
     &:first-child {
       margin-bottom: 0.5rem;
@@ -188,6 +195,24 @@ html {
   text-align: center;
   transition: all 0.2s linear;
   box-shadow: 5px 5px 5px #545454;
+  @media only screen and (max-width: 767px) {
+    height: 62%;
+    width: auto;
+    display: inherit;
+    transition: height 0.2s linear;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    z-index: 999999;
+  }
+  .ag-reg {
+    font-family: 'AtlasGrotesk-Regular';
+    letter-spacing: 0.35px;
+  }
+  .ag-thin {
+    font-family: 'AtlasGrotesk-Thin';
+    letter-spacing: 0.35px;
+  }
 }
 #nav:hover img {
   visibility: visible;
@@ -200,12 +225,24 @@ html {
   white-space: nowrap;
   visibility: hidden;
   color: white;
+  @media only screen and (max-width: 767px) {
+    width: auto;
+    transition: height 0.2s linear;
+  }
 }
 #nav:hover p {
   width: 95%;
   visibility: visible;
+  @media only screen and (max-width: 767px) {
+    width: auto;
+    transition: height 0.2s linear;
+  }
 }
 #nav:hover {
   width: 95%;
+  @media only screen and (max-width: 767px) {
+    width: auto;
+    transition: height 0.2s linear;
+  }
 }
 </style>
