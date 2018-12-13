@@ -201,6 +201,7 @@ html {
   @media only screen and (max-width: 767px) {
     height: 62%;
     width: auto;
+    display: inline-table;
     transition: height 0.2s linear;
     padding-top: 1rem;
     padding-right: 1rem;
@@ -245,7 +246,6 @@ html {
   width: 95%;
   @media only screen and (max-width: 767px) {
     width: auto;
-    visibility: visible;
     transition: height 0.2s linear;
   }
 }
