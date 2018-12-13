@@ -201,7 +201,6 @@ html {
   @media only screen and (max-width: 767px) {
     height: 62%;
     width: auto;
-    width: 60%;
     transition: height 0.2s linear;
     padding-top: 1rem;
     padding-right: 1rem;
@@ -245,7 +244,7 @@ html {
 #nav:hover {
   width: 95%;
   @media only screen and (max-width: 767px) {
-    width: 60%;
+    width: auto;
     visibility: visible;
     transition: height 0.2s linear;
   }
