@@ -195,7 +195,11 @@ html {
   height: 230px;
   border: 2px solid black;
   text-align: center;
-  transition: all 0.2s linear;
+  overflow: hidden;
+  -webkit-transition: width 0.2s linear;
+  -moz-transition: width 0.2s linear;
+  -o-transition: width 0.2s linear;
+  transition: width 0.2s linear;
   box-shadow: 5px 5px 5px #545454;
   @media only screen and (max-width: 767px) {
     height: 62%;
@@ -205,7 +209,6 @@ html {
     padding-top: 1rem;
     padding-right: 1rem;
     padding-left: 1rem;
-    z-index: 999999;
   }
   .ag-reg {
     font-family: 'AtlasGrotesk-Regular';
