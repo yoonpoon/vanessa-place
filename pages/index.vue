@@ -205,6 +205,7 @@ html {
     padding-top: 1rem;
     padding-right: 1rem;
     padding-left: 1rem;
+    z-index: 999999;
   }
   .ag-reg {
     font-family: 'AtlasGrotesk-Regular';
@@ -215,8 +216,7 @@ html {
     letter-spacing: 0.35px;
   }
 }
-#nav:hover,
-#nav:active img {
+#nav:hover img {
   visibility: visible;
 }
 #nav {
@@ -240,8 +240,7 @@ html {
     transition: height 0.2s linear;
   }
 }
-#nav:hover,
-#nav:active p {
+#nav:hover p {
   width: 95%;
   visibility: visible;
   @media only screen and (max-width: 767px) {
@@ -249,8 +248,7 @@ html {
     transition: height 0.2s linear;
   }
 }
-#nav:hover,
-#nav:active {
+#nav:hover {
   width: 95%;
   @media only screen and (max-width: 767px) {
     width: auto;
