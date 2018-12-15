@@ -219,6 +219,9 @@ html {
 #nav:hover img {
   visibility: visible;
 }
+#nav:active img {
+  visibility: visible;
+}
 #nav p {
   width: 30px;
   transition: all 0.2s linear;
