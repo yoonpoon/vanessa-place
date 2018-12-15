@@ -216,14 +216,15 @@ html {
     letter-spacing: 0.35px;
   }
 }
-#nav:hover img {
+#nav:hover,
+#nav:active img {
   visibility: visible;
 }
 #nav {
   img {
     &:active {
       visibility: visible;
-    } 
+    }
   }
 }
 #nav p {
@@ -240,7 +241,8 @@ html {
     transition: height 0.2s linear;
   }
 }
-#nav:hover p {
+#nav:hover,
+#nav:active p {
   width: 95%;
   visibility: visible;
   @media only screen and (max-width: 767px) {
@@ -248,7 +250,8 @@ html {
     transition: height 0.2s linear;
   }
 }
-#nav:hover {
+#nav:hover,
+#nav:active {
   width: 95%;
   @media only screen and (max-width: 767px) {
     width: auto;
