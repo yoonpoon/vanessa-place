@@ -205,7 +205,6 @@ html {
     padding-top: 1rem;
     padding-right: 1rem;
     padding-left: 1rem;
-    z-index: 999999;
   }
   .ag-reg {
     font-family: 'AtlasGrotesk-Regular';
