@@ -219,8 +219,12 @@ html {
 #nav:hover img {
   visibility: visible;
 }
-#nav:active img {
-  visibility: visible;
+#nav {
+  img {
+    &:active {
+      visibility: visible;
+    } 
+  }
 }
 #nav p {
   width: 30px;
