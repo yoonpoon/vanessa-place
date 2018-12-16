@@ -2,25 +2,25 @@
   <section class="wrap">
     <div 
       id="nav" 
-      class="flex flex-justify">
-      <div class="nav-copy-block sm-col sm-col-12">
+      class="flex flex-justify clearfix">
+      <div class="nav-copy-block sm-col sm-col-12 md-col md-col-12">
         <p class="ag-reg"> Vanessa Place </p>
         <p class="ag-thin"> Criminal Appellate Lawyer</p>
         <p class="ag-thin"> Artist</p>
         <p class="ag-thin"> New York, NY</p>
       </div>
-      <div class="nav-copy-block sm-col sm-col-12 flex-top">
+      <div class="nav-copy-block sm-col sm-col-12 md-col md-col-12 flex-top">
         <img 
           class="bio-photo" 
           src="~/assets/Vanessa_Site_Photo.png">
       </div>
-      <div class="nav-copy-block sm-col sm-col-12">
+      <div class="nav-copy-block sm-col sm-col-12 md-col md-col-12">
         <p class="ag-reg"> Contact </p>
         <p class="ag-thin"> Email: Acutlet@gmail.com </p>
         <p class="ag-thin"> Twitter: @VanessaPlace2 </p>
         <p class="ag-thin"> Instagram: @VanessaPlacex </p>
       </div>
-      <div class="nav-copy-block sm-col sm-col-12">
+      <div class="nav-copy-block sm-col sm-col-12 md-col md-col-12">
         <p class="ag-reg"> Site Construction  </p>
         <p class="ag-thin"> Art Direction + Design: Satomi</p>
         <p class="ag-thin"> Development: Albert Lee </p>
@@ -136,12 +136,15 @@ html {
   .wrap {
     width: 95%;
     margin: 0 auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
     .sr-container {
       padding-right: 15px;
       z-index: 0;
       margin-bottom: 0px;
-      // padding-right: 15px;
-      // visibility: hidden;
+      @media only screen and (max-width: 767px) {
+        padding-right: 0px;
+      }
     }
     .sr-url {
       color: #006621;
