@@ -2,8 +2,8 @@
   <section class="wrap">
     <div 
       id="nav"
-      onClick="return true"
-      class="flex flex-justify clearfix">
+      class="flex flex-justify clearfix"
+      @click="toggle()">
       <div class="nav-copy-block sm-col sm-col-12 md-col md-col-12">
         <p class="ag-reg"> Vanessa Place </p>
         <p class="ag-thin"> Criminal Appellate Lawyer</p>
@@ -75,7 +75,7 @@ export default {
   data() {
     return {
       posts: [],
-      busy: false
+      isOpen: false
     }
   },
   asyncData() {
@@ -98,6 +98,9 @@ export default {
         }
         this.busy = false
       }, 1000)
+    },
+    toggle: function() {
+      this.isOpen = !this.isOpen
     }
   }
 }
