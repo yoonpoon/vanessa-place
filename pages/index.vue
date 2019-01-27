@@ -1,7 +1,8 @@
 <template>
   <section class="wrap">
     <div 
-      id="nav" 
+      id="nav"
+      onClick="return true"
       class="flex flex-justify clearfix">
       <div class="nav-copy-block sm-col sm-col-12 md-col md-col-12">
         <p class="ag-reg"> Vanessa Place </p>
