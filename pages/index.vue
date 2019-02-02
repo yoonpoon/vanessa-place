@@ -135,7 +135,7 @@ export default {
       el.style.height = ''
     },
     willLeave: function(el) {
-      el.style.height = '0'
+      el.style.height = ''
     }
   }
 }
