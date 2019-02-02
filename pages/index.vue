@@ -34,43 +34,42 @@
       <div class="lg-hide clearfix">
         <div 
           class="nav-bar"
-          @click="show=!show"/>
-        <div>
+          @click="show=!show">
           <transition 
             name="slide-toggle" 
             @after-enter="transitionComplete" 
             @before-leave="willLeave">
-            <div 
-              v-if="show">
-              <div class="nav-copy-block sm-col sm-col-12 md-col lg-col-3">
-                <p class="ag-reg"> Vanessa Place </p>
-                <p class="ag-thin"> Criminal Appellate Lawyer</p>
-                <p class="ag-thin"> Artist</p>
-                <p class="ag-thin"> New York, NY</p>
+            <div
+              v-if="show"
+              class="container nav-content">
+              <div class="sm-col sm-col-12 md-col lg-col-3">
+                <p class="ag-reg red"> Vanessa Place </p>
+                <p class="ag-thin mg-1"> Criminal Appellate Lawyer <br> Artist</p>
+                <p class="ag-thin red"> NYC</p>
               </div>
               <div class="sm-col sm-col-12 md-col lg-col-3">
                 <img 
                   class="bio-photo-mob" 
                   src="~/assets/Vanessa_Site_Photo.png">
               </div>
-              <div class="nav-copy-block sm-col sm-col-12 md-col lg-col-3">
+              <div class="sm-col sm-col-12 contact-wrap">
                 <p class="ag-reg"> Contact </p>
                 <p class="ag-thin"> Email: Acutlet@gmail.com </p>
                 <p class="ag-thin"> Twitter: @VanessaPlace2 </p>
                 <p class="ag-thin"> Instagram: @VanessaPlacex </p>
               </div>
-              <div class="nav-copy-block sm-col sm-col-12 md-col lg-col-3">
-                <p class="ag-reg"> Site Construction  </p>
+              <div class="sm-col sm-col-12 md-col lg-col-3 p-right">
+                <p class="ag-reg"> Credits  </p>
                 <p class="ag-thin"> Art Direction + Design: Satomi</p>
                 <p class="ag-thin"> Development: Albert Lee </p>
                 <p class="ag-thin"> Photography: Dan Allegretto </p>
               </div>
-              <div class="nav-copy-block sm-col sm-col-12 ">
+              <div class="sm-col sm-col-12 nav-footer center">
                 <p class="ag-reg"> Made in America, 2018 </p>
               </div>                 
             </div>
           </transition>
-        </div>    
+        </div>
       </div>
     </div>
     <no-ssr>
@@ -133,10 +132,10 @@ export default {
   },
   methods: {
     transitionComplete: function(el) {
-      el.style.height = '30px'
+      el.style.height = ''
     },
     willLeave: function(el) {
-      el.style.height = ''
+      el.style.height = '0'
     }
   }
 }
@@ -178,6 +177,13 @@ html {
     font-size: 14px;
     margin-bottom: 0;
     line-height: 1.25;
+  }
+  .bg-blk {
+    background: black;
+  }
+  .nav-content {
+    background: black;
+    padding: 1rem;
   }
   .wrap {
     width: 95%;
@@ -326,67 +332,91 @@ html {
   width: 92.5%;
   top: 5%;
   background: black;
+  .nav-footer {
+    margin-top: 25px;
+    p {
+      font-size: 12px;
+    }
+  }
+  .contact-wrap {
+    margin: 25px 0px;
+  }
+  .mg-1 {
+    margin: 5px 0px;
+  }
+  .p-right {
+    text-align: right;
+  }
+  .ag-reg {
+    font-family: 'AtlasGrotesk-Regular';
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+  }
   .ag-thin {
+    font-family: 'AtlasGrotesk-Thin';
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
     color: white;
+  }
+  .red {
+    color: red;
   }
   .nav-copy-block {
     &:first-of-type {
       margin-top: 50px;
     }
   }
+
   .bio-photo-mob {
     border: 1px solid red;
     display: flex;
+    margin-left: auto;
     max-height: 220px;
     height: auto !important;
   }
-}
-#mobile-nav:hover img {
-  transition: height 0.2s linear;
-  visibility: visible;
 }
 #mobile-nav p {
   background-color: black;
   overflow: hidden;
   white-space: nowrap;
-  visibility: hidden;
+  // visibility: hidden;
   color: white;
   @media only screen and (max-width: 1024px) {
     width: auto;
-    visibility: visible;
-    transition: height 0.2s linear;
+    // visibility: visible;
+    // transition: height 0.2s linear;
   }
 }
 #mobile-nav:hover p {
   // width: 100%;
-  transition: all 0.2s linear;
-  visibility: visible;
+  // transition: all 0.2s linear;
+  // visibility: visible;
   @media only screen and (max-width: 1024px) {
-    width: auto;
-    transition: height 0.2s linear;
+    // width: auto;
+    // transition: height 0.2s linear;
   }
 }
 #mobile-nav:hover {
-  transition: all 0.2s linear;
+  // transition: all 0.2s linear;
   max-width: 100%;
   @media only screen and (max-width: 1024px) {
-    transition: height 0.2s linear;
+    // transition: height 0.2s linear;
   }
 }
 .slide-toggle-enter-active,
 .slide-toggle-leave {
-  // height: 30px;
-  transition: height 0.2s;
+  // transition: height 0.2s ease;
 }
 .slide-toggle-enter,
 .slide-toggle-leave-active {
-  height: 0px;
-  transition: height 0.2s;
+  // transition: height 0.2s ease;
 }
 .nav-bar {
   background: black;
   position: fixed;
-  width: 92.5%;
+  width: 85%;
+  left: 50%;
+  transform: translateX(-51%);
   height: 50px;
   top: 5%;
 }
