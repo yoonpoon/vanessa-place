@@ -54,15 +54,15 @@
               </div>
               <div class="sm-col sm-col-12 contact-wrap">
                 <p class="ag-reg"> Contact </p>
-                <p class="ag-thin"> Email: Acutlet@gmail.com </p>
-                <p class="ag-thin"> Twitter: @VanessaPlace2 </p>
-                <p class="ag-thin"> Instagram: @VanessaPlacex </p>
+                <p class="ag-thin"> Email: <span class="red">Acutlet@gmail.com </span> </p>
+                <p class="ag-thin"> Twitter: <span class="red"> @VanessaPlace2 </span> </p>
+                <p class="ag-thin"> Instagram: <span class="red"> @VanessaPlacex </span> </p>
               </div>
               <div class="sm-col sm-col-12 md-col lg-col-3 p-right">
                 <p class="ag-reg"> Credits  </p>
-                <p class="ag-thin"> Art Direction + Design: Satomi</p>
-                <p class="ag-thin"> Development: Albert Lee </p>
-                <p class="ag-thin"> Photography: Dan Allegretto </p>
+                <p class="ag-thin"> Art Direction: <span class="red"> Satomi.studio </span> </p>
+                <p class="ag-thin"> Development: <span class="red">Albert Lee </span> </p>
+                <p class="ag-thin"> Photography: <span class="red">Dan Allegretto </span></p>
               </div>
               <div class="sm-col sm-col-12 nav-footer center">
                 <p class="ag-reg"> Made in America, 2018 </p>
@@ -92,18 +92,13 @@
         </div>        
       </div>
     </no-ssr>
-    <marquee-text :duration="30">
-      <div class="marquee">Pay me: <a 
+    <marquee-text 
+      :repeat="10" 
+      :duration="5">
+      <div class="marquee"> <a 
         href="https://venmo.com/vanessa-place" 
-        target="_blank"> @Vanessa-Place </a> • Pay me: <a 
-          href="https://venmo.com/vanessa-place" 
-          target="_blank"> @Vanessa-Place </a> • Pay me: <a 
-            href="https://venmo.com/vanessa-place" 
-            target="_blank"> @Vanessa-Place </a> • Pay me: <a 
-              href="https://venmo.com/vanessa-place" 
-              target="_blank"> @Vanessa-Place </a> • Pay me: <a 
-                href="https://venmo.com/vanessa-place" 
-                target="_blank"> @Vanessa-Place </a> • </div>
+        target="_blank">&nbsp;Pay me: @Vanessa-Place • </a> 
+      </div>
     </marquee-text>    
   </section>
 </template>
@@ -139,7 +134,7 @@ export default {
     }
   }
 }
-</script>
+</script> 
 
 <style lang="scss">
 html {
@@ -217,7 +212,7 @@ html {
   }
 }
 .marquee {
-  color: red;
+  color: #f61900;
   font-family: 'AtlasGrotesk-Regular';
   font-size: 42px;
   margin: 3rem 0 3rem 0;
@@ -234,13 +229,13 @@ html {
   p {
     &:first-child {
       margin-bottom: 0.5rem;
-      color: red !important;
+      color: #f61900 !important;
     }
   }
 }
 .bio-photo {
   visibility: hidden;
-  border: 1px solid red;
+  border: 1px solid #f61900;
   display: flex;
   max-height: 220px;
   height: auto !important;
@@ -336,30 +331,37 @@ html {
     margin-top: 25px;
     p {
       font-size: 12px;
+      font-family: 'AtlasGrotesk-Light';
     }
   }
   .contact-wrap {
     margin: 25px 0px;
+    .ag-reg {
+      margin-bottom: 5px;
+    }
   }
   .mg-1 {
     margin: 5px 0px;
   }
   .p-right {
     text-align: right;
+    .ag-reg {
+      margin-bottom: 5px;
+    }
   }
   .ag-reg {
-    font-family: 'AtlasGrotesk-Regular';
+    font-family: 'AtlasGrotesk-Light';
     text-transform: uppercase;
     letter-spacing: 0.35px;
   }
   .ag-thin {
-    font-family: 'AtlasGrotesk-Thin';
+    font-family: 'AtlasGrotesk-Light';
     text-transform: uppercase;
     letter-spacing: 0.35px;
     color: white;
   }
   .red {
-    color: red;
+    color: #f61900;
   }
   .nav-copy-block {
     &:first-of-type {
