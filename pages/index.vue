@@ -26,9 +26,12 @@
         <p class="ag-thin"> Development: Albert Lee </p>
         <p class="ag-thin"> Photography: Dan Allegretto </p>
       </div>
-      <!-- <div class="nav-copy-block sm-col sm-col-12">
+      <div class="nav-copy-block sm-col sm-col-12 made">
         <p class="ag-reg"> Made in America, 2018 </p>
-      </div>             -->
+        <p class="ag-reg"> Made in America, 2018 </p>
+        <p class="ag-reg"> Made in America, 2018 </p>
+        <p class="ag-reg"> Made in America, 2018 </p>
+      </div>            
     </div>
     <div id="mobile-nav">
       <div class="lg-hide clearfix">
@@ -202,6 +205,14 @@ html {
     }
   }
 }
+.made {
+  .ag-reg {
+    visibility: hidden !important;
+    &:first-of-type {
+      visibility: visible !important;
+    }
+  }
+}
 .flex-top {
   align-self: flex-end;
 }
@@ -256,16 +267,16 @@ html {
   border: 2px solid black;
   text-align: center;
   overflow: hidden;
-  -webkit-transition: width 0.2s linear;
-  -moz-transition: width 0.2s linear;
-  -o-transition: width 0.2s linear;
-  transition: width 0.2s linear;
+  -webkit-transition: width 0.35s linear;
+  -moz-transition: width 0.35s linear;
+  -o-transition: width 0.35s linear;
+  transition: width 0.35s linear;
   box-shadow: 5px 5px 5px #545454;
   @media only screen and (max-width: 1024px) {
     // height: 62%;
     width: auto;
     display: none !important;
-    transition: height 0.2s linear;
+    transition: height 0.35s linear;
     padding-top: 1rem;
     padding-right: 1rem;
     padding-left: 1rem;
