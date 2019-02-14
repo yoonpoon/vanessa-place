@@ -129,7 +129,7 @@ html {
     font-weight: lighter;
   }
   a {
-    color: #ff0000;
+    color: black;
     font-family: 'AtlasGrotesk-Regular';
     &:hover {
       text-decoration: none;
@@ -190,7 +190,8 @@ html {
   }
 }
 .marquee {
-  color: #f61900;
+  text-transform: uppercase;
+  color: black;
   font-family: 'AtlasGrotesk-Regular';
   font-size: 42px;
   margin: 3rem 0 3rem 0;
