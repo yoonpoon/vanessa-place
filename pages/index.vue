@@ -12,7 +12,6 @@
               <div class="sm-col sm-col-12 md-col lg-col-12">
                 <p class="ag-reg red"> Vanessa Place </p>
                 <p class="ag-thin mg-1"> Criminal Appellate Lawyer <br> Artist</p>
-                <p class="ag-thin red"> NYC</p>
               </div>
               <div class="sm-col sm-col-12 md-col lg-col-12">
                 <img 
@@ -24,6 +23,7 @@
                 <p class="ag-thin"> Email: <span class="red">Acutlet@gmail.com </span> </p>
                 <p class="ag-thin"> Twitter: <span class="red"> @VanessaPlace2 </span> </p>
                 <p class="ag-thin"> Instagram: <span class="red"> @VanessaPlacex </span> </p>
+                <p class="ag-thin nav-footer"> NEW YORK, NEW YORK</p>
               </div>
               <div class="sm-col sm-col-12 md-col lg-col-12 p-right">
                 <p class="ag-reg"> Credits  </p>
@@ -31,7 +31,7 @@
                 <p class="ag-thin"> Development: <span class="red">Albert Lee </span> </p>
                 <p class="ag-thin"> Photography: <span class="red">Dan Allegretto </span></p>
               </div>
-              <div class="sm-col sm-col-12 nav-footer center">
+              <div class="sm-col sm-col-12 nav-footer p-right">
                 <p class="ag-reg"> Made in America, 2018 </p>
               </div>                 
             </div>
@@ -306,10 +306,11 @@ html {
   top: 5%;
   background: black;
   .nav-footer {
-    padding-top: 25px;
+    padding-top: 10px;
+    font-size: 10px;
     background: black;
     p {
-      font-size: 12px;
+      font-size: 10px;
       font-family: 'AtlasGrotesk-Light';
     }
   }
