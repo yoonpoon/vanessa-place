@@ -160,7 +160,7 @@ html {
       z-index: 0;
       margin-bottom: 0px;
       @media only screen and (max-width: 767px) {
-        padding-right: 0px;
+        padding: 0px 10px;
       }
       .sr-link {
         color: #1a0dab;
