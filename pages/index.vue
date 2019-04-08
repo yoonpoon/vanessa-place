@@ -6,36 +6,38 @@
           :class="{ active: show }"
           class="sm-col-10 md-col-6 lg-col-4 nav-bar"
           @click="show=!show"/>
-        <div
-          v-if="show"
-          class="sm-col-10 md-col-6 lg-col-4 nav-content">
-          <div 
-            class="sm-col sm-col-12 md-col lg-col-12 close-bar"
-            @click="show=!show">
-            <p class="ag-reg red"> Vanessa Place </p>
-            <p class="ag-thin mg-1"> Criminal Appellate Lawyer <br> Artist</p>
+        <div class="clearfix">
+          <div
+            v-if="show"
+            class="sm-col-10 md-col-6 lg-col-4 nav-content">
+            <div 
+              class="sm-col sm-col-12 md-col lg-col-12 close-bar"
+              @click="show=!show">
+              <p class="ag-reg red"> Vanessa Place </p>
+              <p class="ag-thin mg-1"> Criminal Appellate Lawyer <br> Artist</p>
+            </div>
+            <div class="sm-col sm-col-12 md-col lg-col-12">
+              <img 
+                class="bio-photo-mob" 
+                src="~/assets/Vanessa_Site_Photo.png">
+            </div>
+            <div class="sm-col sm-col-12 contact-wrap">
+              <p class="ag-reg"> Contact </p>
+              <p class="ag-thin"> Email: <span class="red">Acutlet@gmail.com </span> </p>
+              <p class="ag-thin"> Twitter: <span class="red"> @VanessaPlace2 </span> </p>
+              <p class="ag-thin"> Instagram: <span class="red"> @VanessaPlacex </span> </p>
+              <p class="ag-thin nav-footer"> NEW YORK, NEW YORK</p>
+            </div>
+            <div class="sm-col sm-col-12 md-col lg-col-12 p-right">
+              <p class="ag-reg"> Credits  </p>
+              <p class="ag-thin"> Art Direction: <span class="red"> Satomi.studio </span> </p>
+              <p class="ag-thin"> Development: <span class="red">Albert Lee </span> </p>
+              <p class="ag-thin"> Photography: <span class="red">Dan Allegretto </span></p>
+            </div>
+            <div class="sm-col sm-col-12 nav-footer p-right">
+              <p class="ag-reg"> Made in America, 2018 </p>
+            </div>                 
           </div>
-          <div class="sm-col sm-col-12 md-col lg-col-12">
-            <img 
-              class="bio-photo-mob" 
-              src="~/assets/Vanessa_Site_Photo.png">
-          </div>
-          <div class="sm-col sm-col-12 contact-wrap">
-            <p class="ag-reg"> Contact </p>
-            <p class="ag-thin"> Email: <span class="red">Acutlet@gmail.com </span> </p>
-            <p class="ag-thin"> Twitter: <span class="red"> @VanessaPlace2 </span> </p>
-            <p class="ag-thin"> Instagram: <span class="red"> @VanessaPlacex </span> </p>
-            <p class="ag-thin nav-footer"> NEW YORK, NEW YORK</p>
-          </div>
-          <div class="sm-col sm-col-12 md-col lg-col-12 p-right">
-            <p class="ag-reg"> Credits  </p>
-            <p class="ag-thin"> Art Direction: <span class="red"> Satomi.studio </span> </p>
-            <p class="ag-thin"> Development: <span class="red">Albert Lee </span> </p>
-            <p class="ag-thin"> Photography: <span class="red">Dan Allegretto </span></p>
-          </div>
-          <div class="sm-col sm-col-12 nav-footer p-right">
-            <p class="ag-reg"> Made in America, 2018 </p>
-          </div>                 
         </div>
       </div>
     </div>
@@ -107,7 +109,7 @@ html {
   }
   h1 {
     font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     font-family: 'Roboto', arial, sans-serif;
     margin-top: 20px;
     font-weight: normal;
@@ -147,6 +149,10 @@ html {
     margin: 0 auto;
     padding: 1.75rem;
     top: 5%;
+    @media only screen and (max-width: 812px) {
+      left: 10px;
+      right: 10px;
+    }
     .close-bar {
       cursor: pointer;
     }
