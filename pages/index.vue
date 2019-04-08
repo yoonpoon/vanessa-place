@@ -108,6 +108,7 @@ html {
   h1 {
     font-size: 18px;
     margin-bottom: 5px;
+    font-family: 'Roboto', arial, sans-serif;
     margin-top: 20px;
     font-weight: normal;
     @media only screen and (max-width: 812px) {
@@ -117,6 +118,7 @@ html {
   h2 {
     font-size: 14px;
     margin-bottom: 3px;
+    font-family: 'Roboto', arial, sans-serif;
     margin-top: 0 !important;
     font-weight: 400 !important;
     font-weight: lighter;
@@ -131,6 +133,7 @@ html {
   p {
     font-size: 14px;
     margin-bottom: 0;
+    font-family: 'Roboto', arial, sans-serif;
     line-height: 1.25;
   }
   .bg-blk {
