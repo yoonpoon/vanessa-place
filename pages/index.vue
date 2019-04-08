@@ -72,8 +72,6 @@
 
 <script>
 import client from '~/plugins/contentful'
-// import marquee from '~/plugins/marquee'
-// import Masonry from '~/plugins/Masonry'
 
 export default {
   data() {
@@ -91,14 +89,6 @@ export default {
       })
       .then(({ items: [{ fields }] }) => fields)
       .catch(console.error)
-  },
-  methods: {
-    transitionComplete: function(el) {
-      el.style.height = ''
-    },
-    willLeave: function(el) {
-      el.style.height = ''
-    }
   }
 }
 </script> 
@@ -120,6 +110,9 @@ html {
     margin-bottom: 5px;
     margin-top: 20px;
     font-weight: normal;
+    @media only screen and (max-width: 812px) {
+      margin-top: 10px;
+    }
   }
   h2 {
     font-size: 14px;
@@ -162,9 +155,15 @@ html {
       @media only screen and (max-width: 767px) {
         padding: 0px 10px;
       }
+      p {
+        color: #575554;
+      }
       .sr-link {
         color: #1a0dab;
-        text-decoration: underline;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
     .sr-url {
