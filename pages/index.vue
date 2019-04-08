@@ -152,8 +152,9 @@ html {
       padding: 0px 15px;
       z-index: 0;
       margin-bottom: 0px;
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 812px) {
         padding: 0px 10px;
+        margin-top: 0.75rem;
       }
       p {
         color: #575554;
@@ -215,7 +216,7 @@ html {
   visibility: hidden;
   border: 1px solid #f61900;
   display: flex;
-  max-height: 290px;
+  max-height: 270px;
   height: auto !important;
 }
 #nav {
