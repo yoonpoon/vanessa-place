@@ -162,6 +162,7 @@ html {
     @media only screen and (max-width: 812px) {
       left: 10px;
       right: 10px;
+      top: 2%;
     }
     .close-bar {
       margin-bottom: 15px;
@@ -431,6 +432,7 @@ html {
   @media only screen and (max-width: 812px) {
     left: 10px;
     right: 10px;
+    top: 2%;
   }
 }
 </style>
