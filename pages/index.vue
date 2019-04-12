@@ -164,7 +164,7 @@ html {
       right: 10px;
     }
     .close-bar {
-      // margin-top: 1.7rem;
+      margin-bottom: 20px;
       cursor: pointer;
     }
     div {
@@ -345,7 +345,7 @@ html {
   }
   .contact-wrap {
     background: black;
-    padding: 25px 0px;
+    padding: 20px 0px;
     .ag-reg {
       margin-bottom: 5px;
     }
