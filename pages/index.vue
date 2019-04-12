@@ -41,9 +41,10 @@
     </div>
     <no-ssr>
       <div 
-        v-masonry 
+        v-masonry
         item-selector=".sr-container" 
-        class="masonry-container">      
+        class="masonry-container" 
+        @click="show=false">      
         <div 
           v-for="(post, index) in posts" 
           :key="index"          
