@@ -155,9 +155,6 @@ html {
     overflow: hidden;
     max-height: 0;
     top: 5%;
-    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-      padding: 0.75rem;
-    }
     &.grow {
       max-height: 650px;
       z-index: 999999;
@@ -389,9 +386,6 @@ html {
     height: auto !important;
     @media only screen and (max-width: 812px) {
       max-height: 220px;
-    }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-      max-height: 180px;
     }
   }
 }
