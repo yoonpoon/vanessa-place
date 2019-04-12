@@ -164,7 +164,7 @@ html {
       right: 10px;
     }
     .close-bar {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       cursor: pointer;
     }
     div {
