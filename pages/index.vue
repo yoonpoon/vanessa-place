@@ -5,69 +5,94 @@
         <div
           :class="{ active: show }"
           class="sm-col-10 md-col-6 lg-col-4 nav-bar"
-          @click="show=!show"/>
-        <div
-          :class="{ grow: show }"
+          @click="show=!show"
+        />
+        <div 
+          :class="{ grow: show }" 
           class="sm-col-10 md-col-6 lg-col-4 nav-content">
           <div 
-            class="sm-col sm-col-12 md-col lg-col-12 close-bar"
+            class="sm-col sm-col-12 md-col lg-col-12 close-bar" 
             @click="show=!show">
-            <p class="ag-reg red"> Vanessa Place </p>
-            <p class="ag-thin mg-1"> Criminal Appellate Lawyer <br> Artist</p>
+            <p class="ag-reg red">Vanessa Place</p>
+            <p class="ag-thin mg-1">
+              Criminal Appellate Lawyer
+              <br>Artist
+            </p>
           </div>
-          <div class="sm-col sm-col-12 md-col lg-col-12">
+          <div class="sm-col-12 md-col lg-col-12">
             <img 
               class="bio-photo-mob" 
               src="~/assets/Vanessa_Site_Photo.png">
           </div>
-          <div class="sm-col sm-col-12 contact-wrap">
-            <p class="ag-reg"> Contact </p>
-            <p class="ag-thin"> Email: <span class="red">Acutlet@gmail.com </span> </p>
-            <p class="ag-thin"> Twitter: <span class="red"> @VanessaPlace2 </span> </p>
-            <p class="ag-thin"> Instagram: <span class="red"> @VanessaPlacex </span> </p>
-            <p class="ag-thin nav-footer"> NEW YORK, NEW YORK</p>
+          <div class="sm-col-12 contact-wrap">
+            <p class="ag-reg">Contact</p>
+            <p class="ag-thin">
+              Email:
+              <span class="red">Acutlet@gmail.com</span>
+            </p>
+            <p class="ag-thin">
+              Twitter:
+              <span class="red">@VanessaPlace2</span>
+            </p>
+            <p class="ag-thin">
+              Instagram:
+              <span class="red">@VanessaPlacex</span>
+            </p>
+            <p class="ag-thin nav-footer">NEW YORK, NEW YORK</p>
           </div>
-          <div class="sm-col sm-col-12 md-col lg-col-12 p-right">
-            <p class="ag-reg"> Credits  </p>
-            <p class="ag-thin"> Art Direction: <span class="red"> Satomi.studio </span> </p>
-            <p class="ag-thin"> Development: <span class="red">Albert Lee </span> </p>
-            <p class="ag-thin"> Photography: <span class="red">Dan Allegretto </span></p>
+          <div class="sm-col-12 md-col lg-col-12 p-right">
+            <p class="ag-reg">Credits</p>
+            <p class="ag-thin">
+              Art Direction:
+              <span class="red">Satomi.studio</span>
+            </p>
+            <p class="ag-thin">
+              Development:
+              <span class="red">Albert Lee</span>
+            </p>
+            <p class="ag-thin">
+              Photography:
+              <span class="red">Dan Allegretto</span>
+            </p>
           </div>
-          <div class="sm-col sm-col-12 nav-footer p-right">
-            <p class="ag-reg"> Made in America, 2018 </p>
-          </div>                 
+          <div class="sm-col-12 nav-footer p-right">
+            <p class="ag-reg">Made in America, 2018</p>
+          </div>
         </div>
       </div>
     </div>
     <no-ssr>
       <div 
-        v-masonry
+        v-masonry 
         item-selector=".sr-container" 
         class="masonry-container" 
-        @click="show=false">      
-        <div 
-          v-for="(post, index) in posts" 
-          :key="index"          
-          class="sr-container sm-col sm-col-12 md-col-6 lg-col-4">
-          <a 
+        @click="show=false">
+        <div
+          v-for="(post, index) in posts"
+          :key="index"
+          class="sr-container sm-col-12 md-col-6 lg-col-4"
+        >
+          <a
             href="https://www.google.com/search?source=hp&ei=syYAXJyeN7TS9AP83aK4Aw&q=vanessa+place&btnK=Google+Search&oq=vanessa+place&gs_l=psy-ab.3..0l10.2461.3979..4108...0.0..0.90.1109.14......0....1..gws-wiz.....0..0i131.X9_fK_W6eT8"
             target="_blank"
-            class="sr-link"> 
-            <h1 class="sr-link-title"> {{ post.fields.title }} </h1> 
+            class="sr-link"
+          >
+            <h1 class="sr-link-title">{{ post.fields.title }}</h1>
           </a>
           <h2 class="sr-url">{{ post.fields.link }}</h2>
-          <p> {{ post.fields.intro }} </p>
-        </div>        
+          <p>{{ post.fields.intro }}</p>
+        </div>
       </div>
     </no-ssr>
     <marquee-text 
       :repeat="10" 
       :duration="5">
-      <div class="marquee"> <a 
-        href="https://venmo.com/vanessa-place" 
-        target="_blank">&nbsp;Pay me: @Vanessa-Place • </a> 
+      <div class="marquee">
+        <a 
+          href="https://venmo.com/vanessa-place" 
+          target="_blank">&nbsp;Pay me: @Vanessa-Place •</a>
       </div>
-    </marquee-text>    
+    </marquee-text>
   </section>
 </template>
 
@@ -117,7 +142,7 @@ html {
     }
   }
   h2 {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 3px;
     font-family: 'Roboto', arial, sans-serif;
     margin-top: 0 !important;
@@ -132,7 +157,7 @@ html {
     }
   }
   p {
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 0;
     font-family: 'Roboto', arial, sans-serif;
     line-height: 1.25;
@@ -175,7 +200,6 @@ html {
   .wrap {
     width: 95%;
     margin: 0 auto;
-    overflow-y: hidden;
     overflow-x: hidden;
     .sr-container {
       padding: 0px 15px;
