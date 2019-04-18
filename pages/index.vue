@@ -7,12 +7,8 @@
           class="sm-col-10 md-col-6 lg-col-4 nav-bar"
           @click="show=!show"
         />
-        <div 
-          :class="{ grow: show }" 
-          class="sm-col-10 md-col-6 lg-col-4 nav-content">
-          <div 
-            class="sm-col sm-col-12 md-col lg-col-12 close-bar" 
-            @click="show=!show">
+        <div :class="{ grow: show }" class="sm-col-10 md-col-6 lg-col-4 nav-content">
+          <div class="sm-col sm-col-12 md-col lg-col-12 close-bar" @click="show=!show">
             <p class="ag-reg red">Vanessa Place</p>
             <p class="ag-thin mg-1">
               Criminal Appellate Lawyer
@@ -20,9 +16,7 @@
             </p>
           </div>
           <div class="sm-col-12 md-col lg-col-12">
-            <img 
-              class="bio-photo-mob" 
-              src="~/assets/Vanessa_Site_Photo.png">
+            <img class="bio-photo-mob" src="~/assets/Vanessa_Site_Photo.png">
           </div>
           <div class="sm-col-12 contact-wrap">
             <p class="ag-reg">Contact</p>
@@ -62,11 +56,7 @@
       </div>
     </div>
     <no-ssr>
-      <div 
-        v-masonry 
-        item-selector=".sr-container" 
-        class="masonry-container" 
-        @click="show=false">
+      <div v-masonry item-selector=".sr-container" class="masonry-container" @click="show=false">
         <div
           v-for="(post, index) in posts"
           :key="index"
@@ -84,13 +74,9 @@
         </div>
       </div>
     </no-ssr>
-    <marquee-text 
-      :repeat="10" 
-      :duration="5">
+    <marquee-text :repeat="10" :duration="5">
       <div class="marquee">
-        <a 
-          href="https://venmo.com/vanessa-place" 
-          target="_blank">&nbsp;Pay me: @Vanessa-Place •</a>
+        <a href="https://venmo.com/vanessa-place" target="_blank">&nbsp;Pay me: @Vanessa-Place •</a>
       </div>
     </marquee-text>
   </section>
@@ -222,6 +208,7 @@ html {
     }
     .sr-url {
       color: #006621;
+      word-break: break-word;
     }
   }
 }
@@ -379,6 +366,7 @@ html {
     margin: 5px 0px;
   }
   .p-right {
+    margin-bottom: 15px;
     text-align: right;
     .ag-reg {
       margin-bottom: 5px;
