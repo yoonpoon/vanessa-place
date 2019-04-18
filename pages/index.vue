@@ -12,12 +12,11 @@
             <p class="ag-reg red">Vanessa Place</p>
             <p class="ag-thin mg-1">
               Criminal Appellate Lawyer
-              <br>
-              <span class="red">Artist</span>
+              <br>Artist
             </p>
           </div>
           <div class="sm-col-12 md-col lg-col-12">
-            <img class="bio-photo-mob" src="~/assets/Vanessa_Site_Photo.png">
+            <img class="bio-photo-mob" src="~/assets/bio_photo.jpg">
           </div>
           <div class="sm-col-12 md-col lg-col-12 contact-wrap">
             <p class="ag-reg">Contact</p>
@@ -183,7 +182,7 @@ html {
     max-height: 0;
     top: 5%;
     &.grow {
-      max-height: 650px;
+      max-height: 700px;
       z-index: 999999;
     }
     @media only screen and (max-width: 812px) {
@@ -203,7 +202,6 @@ html {
     padding: 0 0.75em;
     max-width: 1640px;
     margin: 0 auto;
-    // overflow-x: hidden;
     .sr-container {
       padding: 0px 15px;
       z-index: 0;
@@ -271,7 +269,6 @@ html {
 }
 .bio-photo {
   visibility: hidden;
-  border: 1px solid #f61900;
   display: flex;
   max-height: 270px;
   height: auto !important;
@@ -363,13 +360,13 @@ html {
   background: black;
   .nav-footer {
     margin-top: 5px;
-    font-size: 10px;
+    font-size: 12px;
     background: black;
     p {
-      font-size: 10px;
+      font-size: 12px;
       font-family: 'AtlasGrotesk-Light';
       @media only screen and (max-width: 812px) {
-        font-size: 8px;
+        font-size: 12px;
       }
     }
   }
@@ -387,6 +384,7 @@ html {
     font-family: 'AtlasGrotesk-Light';
     text-transform: uppercase;
     letter-spacing: 0.35px;
+    font-size: 19px;
     @media only screen and (max-width: 812px) {
       font-size: 16px;
     }
@@ -396,12 +394,14 @@ html {
     text-transform: uppercase;
     letter-spacing: 0.35px;
     color: white;
+    font-size: 19px;
     @media only screen and (max-width: 812px) {
       font-size: 16px;
     }
     &.nav-footer {
+      font-size: 12px;
       @media only screen and (max-width: 812px) {
-        font-size: 8px;
+        font-size: 12px;
       }
     }
     a {
@@ -418,7 +418,6 @@ html {
     }
   }
   .bio-photo-mob {
-    border: 1px solid red;
     display: flex;
     margin: 0 auto;
     max-height: 290px;
