@@ -18,7 +18,8 @@ module.exports = {
         name: 'og:image',
         content:
           'http://images.ctfassets.net/4wseqcsd8m40/4F5HPmDaGQoIwuUgMw0mqE/968c6e24bfa9ab48d55b14fa2b48982d/DIS_BG_8.jpg?fl=progressive'
-      }
+      },
+      { name: 'og:description', content: 'How am I possible?' }
     ],
     link: [
       {
