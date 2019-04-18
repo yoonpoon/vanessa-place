@@ -161,7 +161,7 @@ html {
   }
   .masonry-container {
     @media only screen and (max-width: 812px) {
-      margin-top: -1rem;
+      margin-top: -1.25rem;
     }
   }
   .bg-blk {
@@ -362,12 +362,9 @@ html {
   top: 5%;
   background: black;
   .nav-footer {
-    padding-top: 10px;
+    margin-top: 5px;
     font-size: 10px;
     background: black;
-    @media only screen and (max-width: 812px) {
-      padding-top: 5px;
-    }
     p {
       font-size: 10px;
       font-family: 'AtlasGrotesk-Light';
