@@ -12,33 +12,42 @@
             <p class="ag-reg red">Vanessa Place</p>
             <p class="ag-thin mg-1">
               Criminal Appellate Lawyer
-              <br>Artist
+              <br>
+              <span class="red">Artist</span>
             </p>
           </div>
           <div class="sm-col-12 md-col lg-col-12">
             <img class="bio-photo-mob" src="~/assets/Vanessa_Site_Photo.png">
           </div>
-          <div class="sm-col-12 contact-wrap">
+          <div class="sm-col-12 md-col lg-col-12 contact-wrap">
             <p class="ag-reg">Contact</p>
             <p class="ag-thin">
               Email:
-              <span class="red">Acutlet@gmail.com</span>
+              <span class="red">
+                <a href="mailto:acutlet@gmail.com?Subject=Hello">acutlet@gmail.com</a>
+              </span>
             </p>
             <p class="ag-thin">
               Twitter:
-              <span class="red">@VanessaPlace2</span>
+              <span class="red">
+                <a href="https://twitter.com/VanessaPlace2" target="_blank">@VanessaPlace2</a>
+              </span>
             </p>
             <p class="ag-thin">
               Instagram:
-              <span class="red">@VanessaPlacex</span>
+              <span class="red">
+                <a href="https://www.instagram.com/vanessaplacex/" target="_blank">@VanessaPlacex</a>
+              </span>
             </p>
-            <p class="ag-thin nav-footer">NEW YORK, NEW YORK</p>
+            <p class="ag-thin nav-footer">NEW YORK, NY</p>
           </div>
           <div class="sm-col-12 md-col lg-col-12 p-right">
             <p class="ag-reg">Credits</p>
             <p class="ag-thin">
               Art Direction:
-              <span class="red">Satomi.studio</span>
+              <span class="red">
+                <a href="http://www.satomi.studio/" target="_blank">satomi</a>
+              </span>
             </p>
             <p class="ag-thin">
               Development:
@@ -46,11 +55,13 @@
             </p>
             <p class="ag-thin">
               Photography:
-              <span class="red">Dan Allegretto</span>
+              <span class="red">
+                <a href="http://dallegretto.com/" target="_blank">dan allegretto</a>
+              </span>
             </p>
           </div>
-          <div class="sm-col-12 nav-footer p-right">
-            <p class="ag-reg">Made in America, 2018</p>
+          <div class="sm-col-12 md-col lg-col-12 nav-footer p-right nav-footer p-right">
+            <p class="ag-reg">Made in America, 2019</p>
           </div>
         </div>
       </div>
@@ -147,6 +158,11 @@ html {
     margin-bottom: 0;
     font-family: 'Roboto', arial, sans-serif;
     line-height: 1.25;
+  }
+  .masonry-container {
+    @media only screen and (max-width: 812px) {
+      margin-top: -1rem;
+    }
   }
   .bg-blk {
     background: black;
@@ -271,7 +287,6 @@ html {
   position: fixed;
   top: 12.5%;
   background-color: black;
-  // height: 230px;
   border: 2px solid black;
   text-align: center;
   overflow: hidden;
@@ -281,7 +296,6 @@ html {
   transition: width 0.35s linear;
   box-shadow: 5px 5px 5px #545454;
   @media only screen and (max-width: 1024px) {
-    // height: 62%;
     width: auto;
     display: none !important;
     transition: height 0.35s linear;
@@ -353,35 +367,46 @@ html {
     p {
       font-size: 10px;
       font-family: 'AtlasGrotesk-Light';
+      @media only screen and (max-width: 812px) {
+        font-size: 8px;
+      }
     }
   }
   .contact-wrap {
     background: black;
-    padding: 20px 0px;
-    .ag-reg {
-      margin-bottom: 5px;
-    }
+    margin: 15px 0px;
   }
   .mg-1 {
-    margin: 5px 0px;
+    margin: 5px 0px 0px 0px;
   }
   .p-right {
-    margin-bottom: 15px;
     text-align: right;
-    .ag-reg {
-      margin-bottom: 5px;
-    }
   }
   .ag-reg {
     font-family: 'AtlasGrotesk-Light';
     text-transform: uppercase;
     letter-spacing: 0.35px;
+    @media only screen and (max-width: 812px) {
+      font-size: 16px;
+    }
   }
   .ag-thin {
     font-family: 'AtlasGrotesk-Light';
     text-transform: uppercase;
     letter-spacing: 0.35px;
     color: white;
+    @media only screen and (max-width: 812px) {
+      font-size: 16px;
+    }
+    &.nav-footer {
+      @media only screen and (max-width: 812px) {
+        font-size: 8px;
+      }
+    }
+    a {
+      color: #f61900;
+      font-family: 'AtlasGrotesk-Light';
+    }
   }
   .red {
     color: #f61900;

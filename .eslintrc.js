@@ -7,9 +7,13 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint'
   },
-  extends: ['plugin:vue/essential', 'plugin:prettier/essential'],
+  extends: ['plugin:vue/essential', 'plugin:prettier/recommended'],
   // required to lint *.vue files
   plugins: ['vue', 'prettier'],
+  rules: {
+    'vue/html-indent': ['error', 2],
+    'vue/max-attributes-per-line': 'off'
+  },
   // add your custom rules here
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
