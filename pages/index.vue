@@ -364,6 +364,9 @@ html {
     padding-top: 10px;
     font-size: 10px;
     background: black;
+    @media only screen and (max-width: 812px) {
+      padding-top: 5px;
+    }
     p {
       font-size: 10px;
       font-family: 'AtlasGrotesk-Light';
