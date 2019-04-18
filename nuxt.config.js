@@ -1,5 +1,4 @@
 require('dotenv').config()
-import ogImage from '~/static/og.jpg'
 
 const pkg = require('./package')
 
