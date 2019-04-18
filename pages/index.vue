@@ -200,9 +200,10 @@ html {
     }
   }
   .wrap {
-    width: 95%;
+    padding: 0 0.75em;
+    max-width: 1640px;
     margin: 0 auto;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     .sr-container {
       padding: 0px 15px;
       z-index: 0;
