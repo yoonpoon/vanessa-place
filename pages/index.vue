@@ -16,7 +16,7 @@
             </p>
           </div>
           <div class="sm-col-12 md-col lg-col-12">
-            <img class="bio-photo-mob" src="~/assets/bio_photo.jpg">
+            <img class="bio-photo-mob" src="~/assets/VP_PHOTO_HR.jpg">
           </div>
           <div class="sm-col-12 md-col lg-col-12 contact-wrap">
             <p class="ag-reg">Contact</p>
@@ -420,7 +420,9 @@ html {
   .bio-photo-mob {
     display: flex;
     margin: 0 auto;
-    max-height: 290px;
+    max-height: 256px !important;
+    width: 224px;
+    object-fit: cover;
     height: auto !important;
     @media only screen and (max-width: 812px) {
       max-height: 220px;
